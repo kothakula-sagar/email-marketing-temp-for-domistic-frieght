@@ -1,0 +1,51 @@
+<!doctype html>
+<html ⚡4email lang="en">
+<head>
+<meta charset="utf-8">
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-1.0.js"></script>
+<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+<style amp4email-boilerplate>body{visibility:hidden}</style>
+<style amp-custom>
+body{background:#ebf2f8;color:#183753;font-family:Arial,Helvetica,sans-serif;margin:0}a{color:#0e4778}.page{max-width:600px;margin:0 auto;background:#fff}.header{background:#08294b;color:#fff;text-align:center;padding:22px 20px}.header .brand{font-size:25px;font-weight:bold}.small{font-size:12px;color:#657b8f}.section{padding:24px 29px}h1{font-size:30px;line-height:1.22;color:#082d50;margin:4px 0 12px}h2{color:#0c3558;font-size:23px;line-height:1.3;margin:7px 0 12px}.lead{font-size:15px;line-height:1.65;color:#546879}.rates{background:#f2f7fc;padding:15px;border-radius:5px;margin:15px 0;font-size:17px;font-weight:bold}.gold{color:#a17020}.note{font-size:12px;line-height:1.55;color:#667d8c}.form-wrap{padding:0 29px 28px}.form-heading{padding:15px 17px;background:#f5b544;color:#092b4c;font-weight:bold;font-size:17px;cursor:pointer;border-radius:5px}.form-inner{background:#f7faff;border:1px solid #dae6f2;padding:21px 15px}.field{margin:12px 0}label{display:block;color:#234967;font-size:13px;font-weight:bold;margin-bottom:6px}input,select,textarea{box-sizing:border-box;width:100%;border:1px solid #becfdf;border-radius:4px;padding:12px;font-family:Arial,Helvetica,sans-serif;font-size:15px;background:#fff;color:#183753}.submit{border:0;background:#0b2f56;color:#fff;cursor:pointer;font-size:15px;font-weight:bold;padding:14px 20px;border-radius:5px;width:100%}.notice{padding:14px 12px;background:#e2f4e9;color:#145433;font-size:14px;line-height:1.5}.error{padding:12px;background:#ffecec;color:#a21919}.footer{background:#09294b;color:#fff;padding:22px 28px;text-align:center;font-size:12px;line-height:1.7}.footer a{color:#f7d58e}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="header"><div class="brand">ABRA LOGISTIC</div><div style="font-size:11px;letter-spacing:2px;margin-top:6px">DOMESTIC ROAD FREIGHT · DELIVERING EXCELLENCE</div></div>
+<amp-img src="https://res.cloudinary.com/kihupnh9/image/upload/v1795060840/abra_freight_hero.jpg" width="600" height="240" layout="responsive" alt="Truck transporting business cargo"></amp-img>
+<div class="section"><div class="gold" style="font-size:12px;font-weight:bold;letter-spacing:1px">FOR SOUTH INDIA BUSINESSES</div><h1>Move freight with confidence.</h1><p class="lead">Whether you dispatch full-truck or part-truck loads, share your shipment details and let our team help with the right transport option.</p><div class="rates">FTL from ₹2/kg &nbsp; · &nbsp; PTL from ₹9/kg</div><p class="note">Indicative South India promotional rates for eligible routes. Final quotation depends on cargo, lane, weight and availability. Pickup and next-day delivery depend on eligible areas, cutoffs and confirmation.</p></div>
+<div class="form-wrap">
+<amp-accordion animate="false">
+<section>
+<h2 class="form-heading">🚛 Interested? Open Freight Enquiry Form ▾</h2>
+<div class="form-inner"><p class="note">Complete this enquiry inside your email. Our team can then contact you about a quotation. Submitting does not book or confirm a shipment.</p>
+<!-- SETUP REQUIRED: Replace AMP_FORM_ENDPOINT with a live HTTPS endpoint supporting AMP for Email CORS, authentication, validation and secure storage. -->
+<form method="post" action-xhr="https://YOUR-VERIFIED-API-ENDPOINT.example/submit-freight-enquiry" target="_top">
+<div class="field"><label for="customer_name">Your name *</label><input id="customer_name" name="customer_name" type="text" maxlength="100" required></div>
+<div class="field"><label for="business_name">Business name *</label><input id="business_name" name="business_name" type="text" maxlength="140" required></div>
+<div class="field"><label for="contact_email">Your email *</label><input id="contact_email" name="contact_email" type="email" maxlength="150" required></div>
+<div class="field"><label for="phone">Contact phone *</label><input id="phone" name="phone" type="tel" inputmode="tel" maxlength="16" required></div>
+<div class="field"><label for="pickup_pin">Pickup PIN code *</label><input id="pickup_pin" name="pickup_pin" type="text" pattern="[0-9]{6}" maxlength="6" inputmode="numeric" required></div>
+<div class="field"><label for="drop_pin">Delivery PIN code *</label><input id="drop_pin" name="drop_pin" type="text" pattern="[0-9]{6}" maxlength="6" inputmode="numeric" required></div>
+<div class="field"><label for="weight_kg">Approximate weight (kg) *</label><input id="weight_kg" name="weight_kg" type="number" min="1" step="0.1" required></div>
+<div class="field"><label for="freight_type">Freight type *</label><select name="freight_type" id="freight_type" required><option value="">Choose freight type</option><option value="FTL">Full Truck Load (FTL)</option><option value="PTL">Part Truck Load (PTL)</option><option value="Unsure">Please advise</option></select></div>
+<div class="field"><label for="goods_type">Goods type *</label><input id="goods_type" name="goods_type" type="text" maxlength="100" required></div>
+<div class="field"><label for="notes">Additional requirements (optional)</label><textarea id="notes" name="notes" rows="3" maxlength="500"></textarea></div>
+<div class="field"><label style="font-weight:normal"><input style="width:auto" type="checkbox" name="contact_permission" value="yes" required> I agree ABRA LOGISTIC may contact me regarding this shipment enquiry.</label></div>
+<button class="submit" type="submit">Submit My Freight Enquiry</button>
+<div submitting><p class="small">Submitting your shipment enquiry…</p></div>
+<div submit-success><template type="amp-mustache"><div class="notice">✅ Thank you. Your enquiry was received. Your reference: {{reference}}</div></template></div>
+<div submit-error><template type="amp-mustache"><div class="error">We couldn't submit your enquiry. Please reply to this email or contact support@abra-logistic.com.</div></template></div>
+</form>
+</div>
+</section>
+</amp-accordion>
+</div>
+<amp-img src="https://res.cloudinary.com/kihupnh9/image/upload/v1795060840/abra_warehouse_operations.jpg" width="600" height="240" layout="responsive" alt="ABRA warehouse cargo operations"></amp-img>
+<div class="section"><h2>Fast freight coordination, built for business.</h2><p class="lead">Truck placement may be as quick as around 30 minutes in supported areas, with next-day delivery options on selected major South India lanes.</p><p><a href="https://www.abra-logistic.com/app.php">Explore Abra Global Shipping</a></p></div>
+<div class="footer">ABRA E-LOGISTIC PRIVATE LIMITED<br>209, 2nd Main Rd, East of NGEF Layout, Kasturi Nagar, Bengaluru, Karnataka 560043, India<br>support@abra-logistic.com<br><a href="https://www.abra-logistic.com/">www.abra-logistic.com</a> · <a href="mailto:support@abra-logistic.com?subject=Unsubscribe%20from%20ABRA%20Emails">Unsubscribe by email</a></div>
+</div>
+</body>
+</html>
